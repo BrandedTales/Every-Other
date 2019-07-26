@@ -10,12 +10,21 @@ namespace RPG.Control
     public class PlayerController : MonoBehaviour
     {
 
+        //Cache fields
         CombatTarget target;
         Health health;
+        Energy energy;
+        Mover mover;
 
+        [Header("Fatigue Values")]
+        [SerializeField] float idleFatigue = 0.01f;
+        [SerializeField] float walkFatigue = 0.5f;
+        [SerializeField] float runFatigue = 1f;
+        [SerializeField] float fatigue = 0f;
+
+        [Header("Idle Fidgets")]
         [SerializeField] float minRepose = 5f;
         [SerializeField] float maxRepose = 8f;
-
         float reposeSet = 0f;
         float timeSinceRepose = 0f;
 
@@ -24,6 +33,8 @@ namespace RPG.Control
         {
             health = GetComponent<Health>();
             reposeSet = UnityEngine.Random.Range(minRepose, maxRepose);
+            energy = GetComponent<Energy>();
+            mover = GetComponent<Mover>();
 
         }
 
@@ -34,6 +45,9 @@ namespace RPG.Control
             {
                 PerformTwitch();
             }
+
+            energy.ReduceEnergy(fatigue);
+
             if (health.IsDead()) return;
 
             if (PerformCombat()) return;
@@ -76,26 +90,38 @@ namespace RPG.Control
 
         private bool PerformMovement()
         {
-            Debug.Log("Click to move.");
+            CauseFatigue();
             RaycastHit2D hit = Physics2D.Raycast(GetMouseRay(), Vector2.zero, 0);
             if (hit)
             {
-                Debug.Log("Raycast hit something: " + hit.ToString());
                 if (Input.GetMouseButton(0))
                 {
-                    GetComponent<Mover>().StartMovement(GetMouseRay(), false);
-                    Debug.Log("Move out!");
+                    mover.StartMovement(GetMouseRay(), false);
                 }
+
                 CheckRun();
                 return true;
             }
             return false;           
 
         }
+
+        private void CauseFatigue()
+        {
+            if (mover.IsMoving())
+            {
+                if (CheckRun())
+                    fatigue = runFatigue;
+                else
+                    fatigue = walkFatigue;
+            }
+            else
+                fatigue = idleFatigue;
+        }
+
         private void PerformTwitch()
         {
-            Debug.Log("Call the repose!");
-            GetComponent<Mover>().ReposeIdle();
+            mover.ReposeIdle();
             timeSinceRepose = 0f;
             reposeSet = UnityEngine.Random.Range(minRepose, maxRepose);
        
@@ -108,15 +134,17 @@ namespace RPG.Control
 
         }
 
-        private void CheckRun()
+        private bool CheckRun()
         {
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
             {
-                GetComponent<Mover>().SetRun(true);
+                mover.SetRun(true);
+                return true;
             }
             else
             {
-                GetComponent<Mover>().SetRun(false);
+                mover.SetRun(false);
+                return false;
             }
         }
 

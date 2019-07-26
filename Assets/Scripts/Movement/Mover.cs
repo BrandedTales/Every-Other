@@ -24,6 +24,7 @@ namespace RPG.Movement
         private float speed;
 
         public bool reachedEndOfPath;
+        private bool isMoving = false;
         private bool targetIndicator = false;
 
         //Cache Fields
@@ -56,6 +57,7 @@ namespace RPG.Movement
         {
             targetPosition.position = destination;
             targetIndicator = true;
+            isMoving = true;
 
             if (!partOfCombat) GetComponent<ActionScheduler>().StartAction(this);
             
@@ -129,6 +131,7 @@ namespace RPG.Movement
                     {
                         reachedEndOfPath = true;
                         targetIndicator = false;
+                        isMoving = false;
                         break;
                     }
                 }
@@ -215,6 +218,8 @@ namespace RPG.Movement
             return transform.GetComponent<Animator>();
 
         }
+
+        public bool IsMoving() { return isMoving; }
 
         private void ShowTargetIndicator()
         {
