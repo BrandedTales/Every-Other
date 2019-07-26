@@ -4,6 +4,7 @@ using RPG.Movement;
 using RPG.Combat;
 using RPG.Core;
 using System;
+using PixelCrushers.DialogueSystem;
 
 namespace RPG.Control
 {
@@ -58,6 +59,17 @@ namespace RPG.Control
 
         }
 
+        public void OnConversationStart(Transform actor)
+        {
+            FindObjectOfType<Pause>().PauseGame();
+            Debug.Log("Frozen!");
+        }
+
+        public void OnConversationEnd(Transform actor)
+        {
+            FindObjectOfType<Pause>().UnpauseGame();
+        }
+
         private bool PerformCombat()
         {
             RaycastHit2D[] hits = Physics2D.RaycastAll(GetMouseRay(), Vector2.zero, 0);
@@ -75,7 +87,6 @@ namespace RPG.Control
 
                 if (Input.GetMouseButton(0))
                 {
-                    Debug.Log("Hit somebody that is a target!");
                     GetComponent<Fighter>().Attack(target.gameObject);
                 }
 
@@ -90,7 +101,8 @@ namespace RPG.Control
 
         private bool PerformMovement()
         {
-            CauseFatigue();
+
+            if (Time.timeScale > 0) CauseFatigue();
             RaycastHit2D hit = Physics2D.Raycast(GetMouseRay(), Vector2.zero, 0);
             if (hit)
             {

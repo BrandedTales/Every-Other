@@ -47,6 +47,8 @@ namespace RPG.Movement
             ShowTargetIndicator();
         }
 
+
+
         public void Cancel()
         {
             targetPosition.position = transform.position;
@@ -102,7 +104,6 @@ namespace RPG.Movement
             //if (gameObject.tag == "Player") Debug.Log(velocity.magnitude + " vs " + nextWaypointDistance);
             if (velocity.magnitude > nextWaypointDistance)
             {
-                Debug.Log("Should be moving...");
                 myAnimator.SetBool("Moving", true);
 
             }

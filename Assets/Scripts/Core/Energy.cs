@@ -46,7 +46,7 @@ namespace RPG.Core
 
         public void ReduceEnergy(float reduceAmount)
         {
-            currentEnergy -= reduceAmount;
+            if (!FindObjectOfType<Pause>().GamePaused()) currentEnergy -= reduceAmount;
 
             if (currentEnergy <= 0)
             {
