@@ -135,6 +135,8 @@ MonoBehaviour:
   suspicionLength: 1
   patrolPath: {fileID: 316489574}
   waypointTolerance: 1
+  minRepose: 5
+  maxRepose: 8
 --- !u!114 &1636941216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +247,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7687024959783490301, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: repathRate
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823654958291627078, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.33480528
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823654958291627078, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.316502
+      objectReference: {fileID: 0}
     - target: {fileID: 5317217313427814314, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -281,20 +298,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5631829305346856183, guid: 1781ef8bddc14b9479b28952cb4a43d6,
         type: 3}
-    - target: {fileID: 7687024959783490301, guid: 2e62e9c4cee9feb45b94e657e86e0719,
-        type: 3}
-      propertyPath: repathRate
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 951080633678965805, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8823654958291627078, guid: 2e62e9c4cee9feb45b94e657e86e0719,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e62e9c4cee9feb45b94e657e86e0719, type: 3}

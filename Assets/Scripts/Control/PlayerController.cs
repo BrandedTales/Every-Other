@@ -102,7 +102,9 @@ namespace RPG.Control
         private bool PerformMovement()
         {
 
-            if (Time.timeScale > 0) CauseFatigue();
+            if (FindObjectOfType<Pause>().GamePaused()) return false;
+
+            CauseFatigue();
             RaycastHit2D hit = Physics2D.Raycast(GetMouseRay(), Vector2.zero, 0);
             if (hit)
             {

@@ -1138,6 +1138,149 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &531805513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6402021209961230967, guid: 8d92d9aebdc89cf4ab7895df488e1b0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2132305403}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &531805514 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1683621771646156367, guid: 8d92d9aebdc89cf4ab7895df488e1b0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2132305403}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &531805515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531805513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: Charris
+  persistentDataName: 
+  portrait: {fileID: 2800000, guid: cf93e10a23c3807409308c1877c33d84, type: 3}
+  spritePortrait: {fileID: 0}
+  barkUISettings:
+    barkUI: {fileID: 11453294, guid: d5a18ab9ec93e0d4284d6fbae4f557e0, type: 3}
+    barkUIOffset: {x: 0, y: 0.5, z: 0}
+  standardDialogueUISettings:
+    subtitlePanelNumber: 0
+    customSubtitlePanel: {fileID: 0}
+    menuPanelNumber: 0
+    customMenuPanel: {fileID: 0}
+    useMenuPanelFor: 0
+    portraitAnimatorController: {fileID: 0}
+    setSubtitleColor: 0
+    applyColorToPrependedName: 0
+    prependActorNameSeparator: ': '
+    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &531805516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531805513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 2048
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags:
+    - Player
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 1
+  barkConversation: Charris
+  barkText: No time!  No Time!
+  barkTextSequence: 
+  barker: {fileID: 531805514}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: 
+  conversationConversant: {fileID: 0}
+  conversationActor: {fileID: 0}
+  startConversationEntryID: -1
+  exclusive: 0
+  skipIfNoValidEntries: 1
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: 62dc2ab89358a16429563c910faa88e5, type: 2}
+--- !u!114 &531805527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531805513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideName: 
+  overrideUseMessage: 
+  maxUseDistance: 2
+  events:
+    onSelect:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    onDeselect:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    onUse:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!1 &596893706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,6 +1483,23 @@ PrefabInstance:
         type: 3}
       propertyPath: currentEnergy
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 163578848, guid: 6f981a75bc667d842a2a540aec5656ad, type: 3}
+      propertyPath: onSelectedUsable.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 163578848, guid: 6f981a75bc667d842a2a540aec5656ad, type: 3}
+      propertyPath: guiSkin
+      value: 
+      objectReference: {fileID: 11400000, guid: a335577d0e85761409aeef66f54670e1,
+        type: 2}
+    - target: {fileID: 163578848, guid: 6f981a75bc667d842a2a540aec5656ad, type: 3}
+      propertyPath: onSelectedUsable.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 163578848, guid: 6f981a75bc667d842a2a540aec5656ad, type: 3}
+      propertyPath: onSelectedUsable.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f981a75bc667d842a2a540aec5656ad, type: 3}
@@ -1566,7 +1726,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 1
+  conversation: Detailed Red Dress
   conversationConversant: {fileID: 893641902}
   conversationActor: {fileID: 3061037285080113556}
   startConversationEntryID: -1
@@ -3577,6 +3737,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1517564648, guid: 8d92d9aebdc89cf4ab7895df488e1b0e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517564648, guid: 8d92d9aebdc89cf4ab7895df488e1b0e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.41
+      objectReference: {fileID: 0}
     - target: {fileID: 491097072535982878, guid: 8d92d9aebdc89cf4ab7895df488e1b0e,
         type: 3}
       propertyPath: nextWaypointDistance
@@ -3586,14 +3754,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1517564648, guid: 8d92d9aebdc89cf4ab7895df488e1b0e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1517564648, guid: 8d92d9aebdc89cf4ab7895df488e1b0e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.41
       objectReference: {fileID: 0}
     - target: {fileID: 887398611, guid: 8d92d9aebdc89cf4ab7895df488e1b0e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3682,6 +3842,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 3061037285080113556}
+    - target: {fileID: 926836438104186780, guid: 4563a85f10f638d4788fb5dcb10a9480,
+        type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 926836438104186754, guid: 4563a85f10f638d4788fb5dcb10a9480,
         type: 3}
       propertyPath: m_BoundingShape2D
@@ -3771,7 +3936,7 @@ PrefabInstance:
     - target: {fileID: 3079969074546921236, guid: 0d83e147a697ee0408e498943e517a9f,
         type: 3}
       propertyPath: orthographic size
-      value: 2.5
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d83e147a697ee0408e498943e517a9f, type: 3}

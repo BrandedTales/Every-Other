@@ -34,9 +34,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.023349047, y: -0.19652231}
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 0.31668404
 --- !u!114 &163578847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +103,21 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: PixelCrushers.DialogueSystem.UsableUnityEvent, DialogueSystem, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &488260978136032345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7349624429723872684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2331714f9b5b9da4fb78e24f950f54b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxEnergy: 1000
+  currentEnergy: 100
+  offset: 0
 --- !u!114 &1092217005544289740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,20 +149,6 @@ MonoBehaviour:
   fatigue: 0
   minRepose: 5
   maxRepose: 8
---- !u!114 &488260978136032345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7349624429723872684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2331714f9b5b9da4fb78e24f950f54b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentEnergy: 100
-  offset: 0
 --- !u!1001 &5862251249854914104
 PrefabInstance:
   m_ObjectHideFlags: 0
