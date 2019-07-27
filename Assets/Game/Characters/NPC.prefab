@@ -137,6 +137,37 @@ MonoBehaviour:
   waypointTolerance: 1
   minRepose: 5
   maxRepose: 8
+--- !u!114 &395400596700168524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6402021209961230967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideName: 
+  overrideUseMessage: 
+  maxUseDistance: 1
+  events:
+    onSelect:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    onDeselect:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    onUse:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!114 &2490845789547780923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +198,19 @@ MonoBehaviour:
     applyColorToPrependedName: 0
     prependActorNameSeparator: ': '
     subtitleColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &3516477386998627537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6402021209961230967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f14285ac1c6b4249a9d82bdd23e5a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1001 &7817534641363550691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268,6 +312,21 @@ PrefabInstance:
         type: 3}
       propertyPath: repathRate
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687024959783490301, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: nextWaypointDistance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687024959783490301, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: runFactor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687024959783490301, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: speed
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8823654958291627078, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}

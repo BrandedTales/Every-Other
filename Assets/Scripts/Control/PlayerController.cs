@@ -68,6 +68,7 @@ namespace RPG.Control
         public void OnConversationEnd(Transform actor)
         {
             FindObjectOfType<Pause>().UnpauseGame();
+            Debug.Log("Annnnnd, Unfreeze!");
         }
 
         private bool PerformCombat()

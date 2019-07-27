@@ -14,17 +14,17 @@ namespace RPG.Movement
         public Transform targetPosition;
         public Path path;
 
-        [SerializeField] float walkSpeed = 2;
-        [SerializeField] float runSpeed = 4;
-        [SerializeField] float nextWaypointDistance = 0;
+        [SerializeField] float speed = 2;
+        [SerializeField] float runFactor = 4;
+        [SerializeField] float nextWaypointDistance = 0.5f;
         [SerializeField] float repathRate = 0.5f;
 
         private int currentWaypoint = 0;
         private float lastRepath = float.NegativeInfinity;
-        private float speed;
 
         public bool reachedEndOfPath;
         private bool isMoving = false;
+        private bool isRunning = false;
         private bool targetIndicator = false;
 
         //Cache Fields
@@ -37,7 +37,6 @@ namespace RPG.Movement
             seeker = GetComponent<Seeker>();
             myAnimator = GetComponent<Animator>();
 
-            speed = walkSpeed;
         }
 
 
@@ -67,6 +66,7 @@ namespace RPG.Movement
 
         private void Move()
         {
+            Debug.Log("We do make it into the move function.");
             if (Time.time > lastRepath + repathRate && seeker.IsDone())
             {
                 lastRepath = Time.time;
@@ -101,9 +101,11 @@ namespace RPG.Movement
             // Multiply the direction by our desired speed to get a velocity
 
             Vector3 velocity = dir * speed * speedFactor;
+            if (isRunning) velocity *= runFactor;
             //if (gameObject.tag == "Player") Debug.Log(velocity.magnitude + " vs " + nextWaypointDistance);
             if (velocity.magnitude > nextWaypointDistance)
             {
+                Debug.Log("Should set the bool to true.");
                 myAnimator.SetBool("Moving", true);
 
             }
@@ -186,16 +188,9 @@ namespace RPG.Movement
 
         public void SetRun(bool isRunning)
         {
-            if (isRunning)
-            {
-                speed = runSpeed;
-                myAnimator.SetBool("Running", true);
-            }
-            else
-            {
-                speed = walkSpeed;
-                myAnimator.SetBool("Running", false);
-            }
+            this.isRunning = isRunning;
+            myAnimator.SetBool("Running", this.isRunning);
+
         }
 
 
