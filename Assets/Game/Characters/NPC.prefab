@@ -137,7 +137,7 @@ MonoBehaviour:
   waypointTolerance: 1
   minRepose: 5
   maxRepose: 8
---- !u!114 &1636941216
+--- !u!114 &2490845789547780923
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,10 +146,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 6402021209961230967}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f14285ac1c6b4249a9d82bdd23e5a9a, type: 3}
+  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  actor: 
+  persistentDataName: 
+  portrait: {fileID: 0}
+  spritePortrait: {fileID: 0}
+  barkUISettings:
+    barkUI: {fileID: 11426712, guid: 21b4828b943afef4896267f31f98ee1a, type: 3}
+    barkUIOffset: {x: 0, y: 0, z: 0}
+  standardDialogueUISettings:
+    subtitlePanelNumber: 0
+    customSubtitlePanel: {fileID: 0}
+    menuPanelNumber: 0
+    customMenuPanel: {fileID: 0}
+    useMenuPanelFor: 0
+    portraitAnimatorController: {fileID: 0}
+    setSubtitleColor: 0
+    applyColorToPrependedName: 0
+    prependActorNameSeparator: ': '
+    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &7817534641363550691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -301,7 +318,7 @@ PrefabInstance:
     - target: {fileID: 951080633678965805, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e62e9c4cee9feb45b94e657e86e0719, type: 3}
