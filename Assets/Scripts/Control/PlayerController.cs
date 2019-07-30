@@ -111,6 +111,7 @@ namespace RPG.Control
             {
                 if (Input.GetMouseButton(0))
                 {
+                    Debug.Log("Click!");
                     mover.StartMovement(GetMouseRay(), false);
                 }
 
