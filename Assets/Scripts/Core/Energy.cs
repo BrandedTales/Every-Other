@@ -11,7 +11,7 @@ namespace RPG.Core
         [SerializeField] float currentEnergy;
         [SerializeField] float offset = 0f;
 
-        Slider fatigueSlider;
+        [SerializeField] Slider fatigueSlider;
 
         // Start is called before the first frame update
         void Start()
@@ -28,7 +28,6 @@ namespace RPG.Core
 
         private void InitializeSlider()
         {
-            fatigueSlider = FindObjectOfType<Slider>();
             fatigueSlider.maxValue = maxEnergy;
         }
 
