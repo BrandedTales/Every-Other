@@ -8,7 +8,9 @@ namespace RPG.Core
     {
         [SerializeField] Slider beSlider;
 
-        [SerializeField] int threatLevel = 0; //Shown for editing purposes.
+        [SerializeField] float threatLevel = 0f; //Shown for editing purposes.
+        float minThreat = 0;
+        float maxThreat = 1000;
         int curPOS = 1;
 
         // Use this for initialization
@@ -21,15 +23,22 @@ namespace RPG.Core
         void Update()
         {
             CheckSliderPosition();
+            Debug.Log("I'm deployed somewhere!!!");
         }
 
         private void CheckSliderPosition()
         {
-            var sliderPOS = Mathf.Ceil(threatLevel / 200);
+            var sliderPOS = Mathf.Ceil(threatLevel / 200.0f);
             if (curPOS != sliderPOS)
             {
                 beSlider.value = sliderPOS;
             }
+        }
+
+        public void AddThreat(float threat)
+        {
+            threatLevel += threat;
+            threatLevel = Mathf.Clamp(threat, minThreat, maxThreat);
         }
     }
 }
