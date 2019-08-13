@@ -690,6 +690,8 @@ GameObject:
   - component: {fileID: 384407406}
   - component: {fileID: 384407407}
   - component: {fileID: 384407408}
+  - component: {fileID: 384407409}
+  - component: {fileID: 384407410}
   m_Layer: 0
   m_Name: Game Objects
   m_TagString: Untagged
@@ -743,6 +745,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beSlider: {fileID: 786558057}
   threatLevel: 0
+--- !u!114 &384407409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384407405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d640818a19218c44ac5f41a811f3b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDayCount: 4
+  days:
+  - {fileID: 1978895994}
+  - {fileID: 241913636}
+  - {fileID: 61066979}
+  - {fileID: 1929032892}
+  imgUnknown: {fileID: 21300000, guid: 870464a538a863a4daa19e76870386b2, type: 3}
+  imgOffensive: {fileID: 21300000, guid: 0f0d52d853eb43540a3ea620f947debc, type: 3}
+  imgDefensive: {fileID: 21300000, guid: ccf6d1d8b5eba1c4a89e4bd158cd0755, type: 3}
+  imgSocial: {fileID: 21300000, guid: adc1a9b651bef2747a67ded8be35f4c4, type: 3}
+--- !u!114 &384407410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384407405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f1336ceeb0e0d4aafa89ac4a10feab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mistLevel: 0
 --- !u!114 &786558057 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1467368862, guid: 9adfdd808c1cdb54597714d5802bd747,
@@ -15115,6 +15152,16 @@ PrefabInstance:
       propertyPath: fatigueSlider
       value: 
       objectReference: {fileID: 7592942532508635350}
+    - target: {fileID: 488260978136032345, guid: 6f981a75bc667d842a2a540aec5656ad,
+        type: 3}
+      propertyPath: maxEnergy
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5769880518551503116, guid: 6f981a75bc667d842a2a540aec5656ad,
+        type: 3}
+      propertyPath: runFatigue
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f981a75bc667d842a2a540aec5656ad, type: 3}
 --- !u!4 &1627191507 stripped

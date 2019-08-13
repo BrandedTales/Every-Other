@@ -56,7 +56,11 @@ namespace RPG.Core
         private void Collapse()
         {
             Debug.Log("Oof!  Collapsed!");
+
             ResetEnergy();
+
+            //Update the phase
+            FindObjectOfType<PhaseController>().NewDay();
         }
     }
 }

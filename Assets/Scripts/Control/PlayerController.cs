@@ -53,6 +53,7 @@ namespace RPG.Control
 
             if (PerformCombat()) return;
             if (PerformMovement()) return;
+            
 
 
             timeSinceRepose += Time.deltaTime;
