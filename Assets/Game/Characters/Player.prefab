@@ -115,9 +115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2331714f9b5b9da4fb78e24f950f54b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnergy: 1000
+  maxEnergy: 500
   currentEnergy: 100
   offset: 0
+  fatigueSlider: {fileID: 0}
 --- !u!114 &1092217005544289740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idleFatigue: 0.01
   walkFatigue: 0.5
-  runFatigue: 1
+  runFatigue: 20
   fatigue: 0
   minRepose: 5
   maxRepose: 8
@@ -169,12 +170,12 @@ PrefabInstance:
     - target: {fileID: 996168440964265730, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.201
+      value: 3.4821997
       objectReference: {fileID: 0}
     - target: {fileID: 996168440964265730, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.796
+      value: -2.5757465
       objectReference: {fileID: 0}
     - target: {fileID: 996168440964265730, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
@@ -221,11 +222,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6966334951790027674, guid: 2e62e9c4cee9feb45b94e657e86e0719,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 3793713179126166420, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
       propertyPath: m_Layer
@@ -236,6 +232,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5317217313427814314, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5631829305346856183, guid: 43dce3a5e82409a41932ec6698431ecd,
+        type: 3}
     - target: {fileID: 7687024959783490301, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
       propertyPath: nextWaypointDistance
@@ -246,12 +248,6 @@ PrefabInstance:
       propertyPath: repathRate
       value: 0.05
       objectReference: {fileID: 0}
-    - target: {fileID: 5317217313427814314, guid: 2e62e9c4cee9feb45b94e657e86e0719,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 5631829305346856183, guid: 43dce3a5e82409a41932ec6698431ecd,
-        type: 3}
     - target: {fileID: 1780601692611602122, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
       propertyPath: characterName
@@ -262,8 +258,12 @@ PrefabInstance:
       propertyPath: locationName
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8823654958291627078, guid: 2e62e9c4cee9feb45b94e657e86e0719, type: 3}
+    - target: {fileID: 6966334951790027674, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e62e9c4cee9feb45b94e657e86e0719, type: 3}
 --- !u!1 &7349624429723872684 stripped
 GameObject:
