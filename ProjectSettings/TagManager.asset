@@ -18,8 +18,8 @@ TagManager:
   - NPC
   - Ground
   - Trees
+  - Fog
   - Dialogue
-  - 
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: PlaySpace
     uniqueID: 626827975
+    locked: 0
+  - name: Fog
+    uniqueID: 760214239
     locked: 0
   - name: Dialogue
     uniqueID: 1130581615
