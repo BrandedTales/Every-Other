@@ -66,7 +66,6 @@ namespace RPG.Movement
 
         private void Move()
         {
-            Debug.Log("We do make it into the move function.");
             if (Time.time > lastRepath + repathRate && seeker.IsDone())
             {
                 lastRepath = Time.time;

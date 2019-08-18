@@ -57,7 +57,6 @@ namespace RPG.Core
         private void AddPhase(bool visible)
         {
             int randomIndex = Random.Range(0, phaseTypes.Length);
-            Debug.Log("Adding phase: " + phaseTypes[randomIndex]);
             phases.Enqueue(new Phase(phaseTypes[randomIndex], visible));
         }
         private void AddPhase(Phase newPhase)
@@ -67,7 +66,6 @@ namespace RPG.Core
 
         private void UpdateImages()
         {
-            Debug.Log("updating the phase images...");
             int index = 0;
             foreach (var i in phases.ToArray())
             {
@@ -109,13 +107,11 @@ namespace RPG.Core
             int visibleRange = maxDayCount - invisibleCount;
             Queue<Phase> newQueue = new Queue<Phase>();
 
-            Debug.Log(visibleRange + " : " + phases.Count);
 
 
             for (int i=0;i<maxDayCount;i++)
             {
                 Phase temp = phases.Dequeue();
-                Debug.Log(temp.phaseName + ": " + i);
                 if (i < visibleRange)
                     temp.SetVisible(true);
                 else
