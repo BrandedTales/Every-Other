@@ -34,9 +34,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.023349047, y: -0.19652231}
+  m_Offset: {x: 0.023349047, y: 0.1}
   serializedVersion: 2
-  m_Radius: 0.31668404
+  m_Radius: 0.24
 --- !u!114 &163578847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,13 +64,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useDefaultGUI: 1
-  guiSkin: {fileID: 0}
+  guiSkin: {fileID: 11400000, guid: a335577d0e85761409aeef66f54670e1, type: 2}
   guiStyleName: label
   alignment: 1
   color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   textStyle: 1
   textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  defaultUseMessage: 
+  defaultUseMessage: (right click to talk)
   useKey: 324
   useButton: Fire2
   enableTouch: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idleFatigue: 0.01
-  walkFatigue: 0.5
-  runFatigue: 20
+  walkFatigue: 0.01
+  runFatigue: 0.01
   fatigue: 0
   minRepose: 5
   maxRepose: 8
@@ -170,12 +170,12 @@ PrefabInstance:
     - target: {fileID: 996168440964265730, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.4821997
+      value: -10.41
       objectReference: {fileID: 0}
     - target: {fileID: 996168440964265730, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5757465
+      value: -12.01
       objectReference: {fileID: 0}
     - target: {fileID: 996168440964265730, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
@@ -222,6 +222,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6966334951790027674, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3793713179126166420, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
       propertyPath: m_Layer
@@ -229,8 +234,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3793713179126166420, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
+      propertyPath: m_Name
+      value: C_Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793713179126166420, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687024959783490301, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: nextWaypointDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687024959783490301, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: repathRate
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823654958291627078, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823654958291627078, guid: 2e62e9c4cee9feb45b94e657e86e0719,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 5317217313427814314, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
@@ -248,16 +278,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7687024959783490301, guid: 2e62e9c4cee9feb45b94e657e86e0719,
-        type: 3}
-      propertyPath: nextWaypointDistance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7687024959783490301, guid: 2e62e9c4cee9feb45b94e657e86e0719,
-        type: 3}
-      propertyPath: repathRate
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 1780601692611602122, guid: 2e62e9c4cee9feb45b94e657e86e0719,
         type: 3}
       propertyPath: characterName
@@ -267,11 +287,6 @@ PrefabInstance:
         type: 3}
       propertyPath: locationName
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6966334951790027674, guid: 2e62e9c4cee9feb45b94e657e86e0719,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e62e9c4cee9feb45b94e657e86e0719, type: 3}

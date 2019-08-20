@@ -27,14 +27,11 @@ namespace RPG.Core
         void Update()
         {
             CheckSliderPosition();
-            Debug.Log("I'm deployed somewhere!!!");
             UpdateDialog();
         }
 
         private void UpdateDialog()
-        {
-            Debug.Log("updating the threat level" + DialogueLua.GetVariable("threatLevel").asFloat);
-            
+        {      
             DialogueLua.SetVariable("threatLevel", threatLevel);
         }
 

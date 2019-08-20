@@ -104,7 +104,6 @@ namespace RPG.Movement
             //if (gameObject.tag == "Player") Debug.Log(velocity.magnitude + " vs " + nextWaypointDistance);
             if (velocity.magnitude > nextWaypointDistance)
             {
-                Debug.Log("Should set the bool to true.");
                 myAnimator.SetBool("Moving", true);
 
             }
