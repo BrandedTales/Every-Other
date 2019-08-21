@@ -1354,12 +1354,42 @@ PrefabInstance:
     - target: {fileID: 4966922521947655756, guid: 2eb4e560eb4a8b54daf4323119b37edd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.259357
+      value: -14.969357
       objectReference: {fileID: 0}
     - target: {fileID: 4966922521947655756, guid: 2eb4e560eb4a8b54daf4323119b37edd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6505432
+      value: 0.91945744
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741159392619397198, guid: 2eb4e560eb4a8b54daf4323119b37edd,
+        type: 3}
+      propertyPath: threatLevel
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741159392619397196, guid: 2eb4e560eb4a8b54daf4323119b37edd,
+        type: 3}
+      propertyPath: mistLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536070667498054692, guid: 2eb4e560eb4a8b54daf4323119b37edd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741159392888799147, guid: 2eb4e560eb4a8b54daf4323119b37edd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966922520948406179, guid: 2eb4e560eb4a8b54daf4323119b37edd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.779711
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966922520948406179, guid: 2eb4e560eb4a8b54daf4323119b37edd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5306726
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb4e560eb4a8b54daf4323119b37edd, type: 3}
@@ -4531,12 +4561,12 @@ PrefabInstance:
     - target: {fileID: 6668141754007431482, guid: 6f981a75bc667d842a2a540aec5656ad,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.41
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 6668141754007431482, guid: 6f981a75bc667d842a2a540aec5656ad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.01
+      value: -10.44
       objectReference: {fileID: 0}
     - target: {fileID: 6668141754007431482, guid: 6f981a75bc667d842a2a540aec5656ad,
         type: 3}
@@ -4588,6 +4618,26 @@ PrefabInstance:
       propertyPath: fatigueSlider
       value: 
       objectReference: {fileID: 1126281247}
+    - target: {fileID: 488260978136032345, guid: 6f981a75bc667d842a2a540aec5656ad,
+        type: 3}
+      propertyPath: maxEnergy
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5769880518551503116, guid: 6f981a75bc667d842a2a540aec5656ad,
+        type: 3}
+      propertyPath: idleFatigue
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5769880518551503116, guid: 6f981a75bc667d842a2a540aec5656ad,
+        type: 3}
+      propertyPath: walkFatigue
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5769880518551503116, guid: 6f981a75bc667d842a2a540aec5656ad,
+        type: 3}
+      propertyPath: runFatigue
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f981a75bc667d842a2a540aec5656ad, type: 3}
 --- !u!1001 &515504197
@@ -11975,6 +12025,87 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1574619923}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1578023525 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6402021209961230967, guid: 8d92d9aebdc89cf4ab7895df488e1b0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 266867860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1578023526 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1683621771646156367, guid: 8d92d9aebdc89cf4ab7895df488e1b0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 266867860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1578023527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578023525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: Mist Master
+  conversationConversant: {fileID: 1578023526}
+  conversationActor: {fileID: 476844307}
+  startConversationEntryID: -1
+  exclusive: 0
+  skipIfNoValidEntries: 1
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: bc4a312a2a7bce04380ff2550cf8086d, type: 2}
 --- !u!1001 &1583423003
 PrefabInstance:
   m_ObjectHideFlags: 0

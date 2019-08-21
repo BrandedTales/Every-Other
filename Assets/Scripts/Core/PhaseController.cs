@@ -19,6 +19,8 @@ namespace RPG.Core
         [SerializeField] Sprite imgDefensive;
         [SerializeField] Sprite imgSocial;
 
+        [SerializeField] float dailyThreat = 100;
+
         // Use this for initialization
         void Start()
         {
@@ -95,6 +97,9 @@ namespace RPG.Core
         {
             phases.Dequeue();
             AddPhase(true);
+
+            FindObjectOfType<BurningEye>().AddThreat(dailyThreat);
+            
         }
 
         private void UpdatePhases(Queue<Phase> newPhases)

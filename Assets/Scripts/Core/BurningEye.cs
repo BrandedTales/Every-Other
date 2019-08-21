@@ -27,13 +27,10 @@ namespace RPG.Core
         void Update()
         {
             CheckSliderPosition();
-            UpdateDialog();
+
         }
 
-        private void UpdateDialog()
-        {      
-            DialogueLua.SetVariable("threatLevel", threatLevel);
-        }
+
 
         private void CheckSliderPosition()
         {
@@ -47,8 +44,10 @@ namespace RPG.Core
         public void AddThreat(float threat)
         {
             threatLevel += threat;
-            threatLevel = Mathf.Clamp(threat, minThreat, maxThreat);
+            threatLevel = Mathf.Clamp(threatLevel, minThreat, maxThreat);
 
         }
+
+        public float GetThreat() { return threatLevel; }
     }
 }

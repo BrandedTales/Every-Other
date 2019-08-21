@@ -37,10 +37,17 @@ namespace RPG.Core
             }
 
         }
-
         private void UpdatePhases()
         {
             myPhaseController.AdjustVisibility(mistLevel);  
         }
+
+        public void AdjustMist(int mistTweak)
+        {
+            mistLevel += mistTweak;
+            mistLevel = Mathf.Clamp(mistLevel, 0, 4);   //Numbers for min and max mist.  TODO->Encapsulate into variables
+        }
+
+        public int GetMist() { return mistLevel; }
     }
 }

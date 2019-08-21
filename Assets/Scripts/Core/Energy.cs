@@ -45,7 +45,7 @@ namespace RPG.Core
 
         public void ReduceEnergy(float reduceAmount)
         {
-            if (!FindObjectOfType<Pause>().GamePaused()) currentEnergy -= reduceAmount;
+            currentEnergy -= reduceAmount;
 
             if (currentEnergy <= 0)
             {
@@ -53,9 +53,15 @@ namespace RPG.Core
             }
         }
 
+        public float GetEnergy() { return currentEnergy; }
+
+        public void SetEnergy(float newEnergy)
+        {
+            currentEnergy = newEnergy;
+        }
+
         private void Collapse()
         {
-            Debug.Log("Oof!  Collapsed!");
 
             ResetEnergy();
 

@@ -47,7 +47,7 @@ namespace RPG.Control
                 PerformTwitch();
             }
 
-            energy.ReduceEnergy(fatigue);
+            if (!FindObjectOfType<Pause>().GamePaused()) energy.ReduceEnergy(fatigue);
 
             if (health.IsDead()) return;
 
@@ -63,13 +63,31 @@ namespace RPG.Control
         public void OnConversationStart(Transform actor)
         {
             FindObjectOfType<Pause>().PauseGame();
-            Debug.Log("Frozen!");
+
+            //Update tracking variables
+            DialogueLua.SetVariable("threatLevel", FindObjectOfType<BurningEye>().GetThreat());
+            DialogueLua.SetVariable("energyLevel", energy.GetEnergy());
+            DialogueLua.SetVariable("mistLevel", FindObjectOfType<MistController>().GetMist());
+
         }
 
         public void OnConversationEnd(Transform actor)
         {
+            //If the conversation has told us to push lua fields to tracking...
+            if (DialogueLua.GetVariable("pushFields").asBool)
+            {
+                Debug.Log(DialogueLua.GetVariable("deltaEnergy").asFloat);
+                energy.ReduceEnergy(DialogueLua.GetVariable("deltaEnergy").asFloat);
+                FindObjectOfType<BurningEye>().AddThreat(DialogueLua.GetVariable("deltaThreat").asFloat);
+                FindObjectOfType<MistController>().AdjustMist(DialogueLua.GetVariable("deltaMist").asInt);
+
+                DialogueLua.SetVariable("deltaEnergy", 0);
+                DialogueLua.SetVariable("deltaThreat", 0);
+                DialogueLua.SetVariable("deltaMist", 0);
+                DialogueLua.SetVariable("pushFields", false);
+
+            }
             FindObjectOfType<Pause>().UnpauseGame();
-            Debug.Log("Annnnnd, Unfreeze!");
         }
 
         private bool PerformCombat()
